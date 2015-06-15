@@ -95,10 +95,10 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 889876679}
-  - 33: {fileID: 889876678}
-  - 64: {fileID: 889876677}
-  - 23: {fileID: 889876676}
   - 114: {fileID: 889876675}
+  - 50: {fileID: 889876678}
+  - 61: {fileID: 889876677}
+  - 212: {fileID: 889876676}
   m_Layer: 0
   m_Name: Loveworm
   m_TagString: Untagged
@@ -124,49 +124,60 @@ MonoBehaviour:
   timer: 0
   hasHost: 0
   host: {fileID: 0}
---- !u!23 &889876676
-MeshRenderer:
+--- !u!212 &889876676
+SpriteRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889876674}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 1
   m_ReflectionProbeUsage: 1
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
+  m_PreserveUVs: 0
   m_ImportantGI: 0
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
---- !u!64 &889876677
-MeshCollider:
+  m_Sprite: {fileID: 21300000, guid: 984a6787040ff4b468014b5342e64581, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!61 &889876677
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889876674}
+  m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &889876678
-MeshFilter:
+  m_Size: {x: 1, y: 1}
+--- !u!50 &889876678
+Rigidbody2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 889876674}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 0
+  m_FixedAngle: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!4 &889876679
 Transform:
   m_ObjectHideFlags: 0
@@ -189,6 +200,7 @@ GameObject:
   - 4: {fileID: 1131765200}
   - 114: {fileID: 1131765199}
   - 114: {fileID: 1131765201}
+  - 114: {fileID: 1131765202}
   m_Layer: 0
   m_Name: Initializer
   m_TagString: Untagged
@@ -211,6 +223,7 @@ MonoBehaviour:
   numberOfCharacters: 5
   characterPrefab: {fileID: 11415420, guid: 8852f2f1055b4f346a9d5c13b47d4c9d, type: 2}
   database: {fileID: 1131765201}
+  spriteGen: {fileID: 1131765202}
 --- !u!4 &1131765200
 Transform:
   m_ObjectHideFlags: 0
@@ -287,6 +300,21 @@ MonoBehaviour:
   - Hyacinth
   - Milo
   - Charlie
+--- !u!114 &1131765202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131765198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5d2e4f5bb8dbe24ca7ee51d44097ded, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hair: []
+  heads: []
+  bodies: []
+  legs: []
 --- !u!1 &1668968234
 GameObject:
   m_ObjectHideFlags: 0

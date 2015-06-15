@@ -8,6 +8,7 @@ public class CharacterGenerator : MonoBehaviour {
 	public int numberOfCharacters = 5;
 	public Character characterPrefab;
 	public CharacteristicDatabase database;
+	public SpriteGenerator spriteGen;
 
 	// Use this for initialization
 	void Awake () {
