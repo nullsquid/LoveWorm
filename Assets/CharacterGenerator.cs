@@ -36,6 +36,7 @@ public class CharacterGenerator : MonoBehaviour {
 				newCharacter.characterName = database.allGenderweirdNames[newNameIndex];
 				database.allGenderweirdNames.Remove(database.allGenderweirdNames[newNameIndex]);				
 			}
+			newCharacter.name = newCharacter.characterName;
 			if(Random.Range(0,1)==0){
 				newCharacter.hasTits = true;
 			}

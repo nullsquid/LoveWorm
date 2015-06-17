@@ -18,5 +18,7 @@ public class Character : MonoBehaviour {
 
 	//public 
 
+	public List<SpriteRenderer> bodyParts = new List<SpriteRenderer>();
+
 
 }
