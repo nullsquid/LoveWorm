@@ -109,7 +109,7 @@ GameObject:
   - 61: {fileID: 6107690}
   - 114: {fileID: 11415420}
   m_Layer: 0
-  m_Name: CharacterPrefab
+  m_Name: SideCharacterPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -304,6 +304,7 @@ MonoBehaviour:
   hasTits: 0
   gender: 
   characterName: 
+  fatigue: 0
   likes: []
   traits: []
   bodyParts: []

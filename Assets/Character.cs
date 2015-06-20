@@ -5,9 +5,16 @@ using System.Collections.Generic;
 public class Character : MonoBehaviour {
 
 	public bool hasTits;
-
+	//written characteristics
 	public string gender;
 	public string characterName;
+
+	//stats
+	public float fatigue;
+	public float arousal;
+	public float safety;
+	public float euphoria;
+
 
 	//what they're attracted to
 	public List<string> likes = new List<string>();
@@ -16,9 +23,16 @@ public class Character : MonoBehaviour {
 	//other characteristics, e.g. likes/dislikes
 	public List<string> traits = new List<string>();
 
-	//public 
+	public List<Character> friends = new List<Character>();
+	public List<Character> enemies = new List<Character>();
+	public List<Character> crushes = new List<Character>();
+	public List<Character> romanticHistory = new List<Character>();
+
 
 	public List<SpriteRenderer> bodyParts = new List<SpriteRenderer>();
 
+	//===STATES===//
+	//idle
+	//
 
 }
