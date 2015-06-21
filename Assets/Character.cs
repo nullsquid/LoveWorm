@@ -5,6 +5,9 @@ using System.Collections.Generic;
 public class Character : MonoBehaviour {
 
 	public bool hasTits;
+
+	public bool isEngaging;
+	public bool isEngagedWith;
 	//written characteristics
 	public string gender;
 	public string characterName;
