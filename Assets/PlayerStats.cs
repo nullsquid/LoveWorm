@@ -1,13 +1,15 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 public class PlayerStats : MonoBehaviour {
 
 	public float jumpRange;
+	public float stamina;
 	public float health = 100f;
 	public float healthTick = 3.0f;
 	public float healthDegradeValueWithoutHost = 10f;
 	public float timer = 0;
+	public float speed;
 
 	public bool hasHost;
 
@@ -33,6 +35,14 @@ public class PlayerStats : MonoBehaviour {
 
 		health -= drainRate;
 		timer = 0;
+
+	}
+
+	void StaminaUse(float amountUsedUp){
+
+	}
+
+	void Fatigued(){
 
 	}
 

@@ -1,44 +1,43 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &186170
+--- !u!1 &153340
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 492718}
-  - 212: {fileID: 21228112}
-  - 50: {fileID: 5072896}
-  - 61: {fileID: 6165408}
-  - 114: {fileID: 11492892}
-  - 114: {fileID: 11456760}
-  - 58: {fileID: 5850816}
+  - 4: {fileID: 437774}
+  - 212: {fileID: 21204934}
+  - 114: {fileID: 11478382}
+  - 50: {fileID: 5044494}
+  - 58: {fileID: 5806896}
+  - 114: {fileID: 11403036}
   m_Layer: 0
-  m_Name: TopChar
-  m_TagString: Host
+  m_Name: LoveWorm
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &492718
+--- !u!4 &437774
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.9338007, y: -.895473003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -3.63548613, y: -.41278711, z: 0}
+  m_LocalScale: {x: .200000003, y: .200000003, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5072896
+--- !u!50 &5044494
 Rigidbody2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
@@ -48,68 +47,58 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!58 &5850816
+--- !u!58 &5806896
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: .349999994
---- !u!61 &6165408
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: .239999995, y: .239999995}
---- !u!114 &11456760
+  m_Radius: .400000006
+--- !u!114 &11403036
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ee33c45056236a4fadfb9cb84ff23c5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0516216129f1c9346bd32c82407f6176, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 0}
-  agent: {fileID: 0}
-  target: {fileID: 0}
-  home: {fileID: 0}
---- !u!114 &11492892
+  canControl: 0
+  moveSpeed: 0
+--- !u!114 &11478382
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b16a2c48ca828814e9a783b1025bf8ea, type: 3}
+  m_Script: {fileID: 11500000, guid: a64172b504e41504ea8ba7d2d05acb1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  targetMarker: {fileID: 0}
-  path: []
-  wander: 1
---- !u!212 &21228112
+  jumpRange: 0
+  stamina: 0
+  health: 100
+  healthTick: 3
+  healthDegradeValueWithoutHost: 10
+  timer: 0
+  speed: 1
+  hasHost: 0
+  host: {fileID: 0}
+--- !u!212 &21204934
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 186170}
+  m_GameObject: {fileID: 153340}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -128,7 +117,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: c41686cdee1c6e44c8a6b54f9a916fb1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 984a6787040ff4b468014b5342e64581, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -139,5 +128,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 186170}
+  m_RootGameObject: {fileID: 153340}
   m_IsPrefabParent: 1

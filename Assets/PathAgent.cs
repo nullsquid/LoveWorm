@@ -12,13 +12,13 @@ public class PathAgent : MonoBehaviour {
 
 
 	//bool goToTarget = false;
-	public bool wander = true;
+	public bool wander;
 
 	void Start(){
 		StartCoroutine("WaitAndMove");
     }
 	void Update(){
-
+		Debug.Log(wander);
 
         MoveToTarget();
 
@@ -29,8 +29,8 @@ public class PathAgent : MonoBehaviour {
 	void MoveToTarget(){
 
 
-		Debug.Log(path);
-		Debug.Log(path.Count);
+		//Debug.Log(path);
+		//Debug.Log(path.Count);
 		if(path != null && path.Count != 0)
 		{
 			//transform.LookAt(target);
