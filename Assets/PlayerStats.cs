@@ -10,6 +10,7 @@ public class PlayerStats : MonoBehaviour {
 	public float healthDegradeValueWithoutHost = 10f;
 	public float timer = 0;
 	public float speed;
+	public float goodFeels;
 
 	public bool hasHost;
 

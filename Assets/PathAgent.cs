@@ -11,6 +11,7 @@ public class PathAgent : MonoBehaviour {
 	public List<Vector2> path;
 
 
+
 	//bool goToTarget = false;
 	public bool wander;
 
