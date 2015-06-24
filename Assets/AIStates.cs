@@ -8,6 +8,7 @@ public class AIStates : MonoBehaviour {
 	public GameObject home;
 	public bool interacting = false;
 	public float stateDelay;
+	public Canvas talkBubble;
 
 	void Start(){
 		stats = GetComponent<Character>();
@@ -28,10 +29,12 @@ public class AIStates : MonoBehaviour {
 
 	void Wandering(){
 		agent.wander = true;
+		agent.StartCoroutine("WaitAndMove");
 	}
 
 	void Calling(){
 		interacting = true;
+		StartCoroutine("WaitToSpeak");
 	}
 
 	void Flirting(){
@@ -39,7 +42,27 @@ public class AIStates : MonoBehaviour {
 	}
 
 	void ExitConversation(){
+		interacting = false;
+		if(talkBubble.enabled == true){
+			talkBubble.enabled = false;
+		}
+		Wandering();
+	}
 
+	void Implanted(){
+
+	}
+	IEnumerator WaitToSpeak(){
+		agent.StopCoroutine("WaitAndMove");
+		yield return new WaitForSeconds(2f);
+		talkBubble.enabled = true;
+		StartCoroutine("NormalConversation");
+
+
+	}
+	IEnumerator NormalConversation(){
+		yield return new WaitForSeconds(Random.Range(1, 10));
+		ExitConversation();
 	}
 
 
