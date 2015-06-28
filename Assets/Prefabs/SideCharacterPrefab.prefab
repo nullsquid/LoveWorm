@@ -236,6 +236,7 @@ Transform:
   m_RootOrder: 4
 --- !u!50 &5058476
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -243,14 +244,15 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
+  m_GravityScale: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!50 &5071922
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -259,11 +261,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &6107690
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -302,11 +304,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasTits: 0
+  isEngaging: 0
+  isEngagedWith: 0
+  isImplanted: 0
   gender: 
   characterName: 
   fatigue: 0
+  arousal: 0
+  safety: 0
+  euphoria: 0
   likes: []
   traits: []
+  friends: []
+  enemies: []
+  crushes: []
+  romanticHistory: []
   bodyParts: []
 --- !u!212 &21219760
 SpriteRenderer:
@@ -470,7 +482,11 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 177842}

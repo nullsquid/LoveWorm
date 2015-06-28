@@ -50,6 +50,7 @@ GameObject:
   - 114: {fileID: 11456760}
   - 58: {fileID: 5850816}
   - 114: {fileID: 11457260}
+  - 114: {fileID: 11417966}
   m_Layer: 0
   m_Name: TopChar
   m_TagString: Host
@@ -89,6 +90,7 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5072896
 Rigidbody2D:
+  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -97,11 +99,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
-  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!58 &5850816
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -128,6 +130,34 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: .239999995, y: .239999995}
+--- !u!114 &11417966
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b25735c0a613364a834aa0fc7bc8cff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasTits: 0
+  isEngaging: 0
+  isEngagedWith: 0
+  isImplanted: 0
+  gender: 
+  characterName: 
+  fatigue: 0
+  arousal: 0
+  safety: 0
+  euphoria: 0
+  likes: []
+  traits: []
+  friends: []
+  enemies: []
+  crushes: []
+  romanticHistory: []
+  bodyParts: []
 --- !u!114 &11456760
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -8,6 +8,7 @@ public class Character : MonoBehaviour {
 
 	public bool isEngaging;
 	public bool isEngagedWith;
+	public bool isImplanted = false;
 	//written characteristics
 	public string gender;
 	public string characterName;

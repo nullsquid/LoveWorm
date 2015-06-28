@@ -10,6 +10,7 @@ public class SpriteGenerator : MonoBehaviour {
 	public List<Sprite> legs = new List<Sprite>();
 	public List<Sprite> bodyLegs = new List<Sprite>();
 	public List<Sprite> feet = new List<Sprite>(); 
+	public List<Sprite> topView = new List<Sprite>();
 
 	public Character character;
 	Sprite newHair;

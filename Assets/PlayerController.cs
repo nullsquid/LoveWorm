@@ -5,6 +5,8 @@ public class PlayerController : MonoBehaviour {
 
 	public bool canControl;
 	public float moveSpeed;
+	//public PlayerStats stats;
+	public GameObject host;
 	// Use this for initialization
 	void Start () {
 		moveSpeed = gameObject.GetComponent<PlayerStats>().speed; 
@@ -30,11 +32,8 @@ public class PlayerController : MonoBehaviour {
 			}
 		}
 		//stand in, should make an "attached" boolean
-		if(canControl == false){
-			if(Input.GetKey(KeyCode.LeftControl)){
-				gameObject.transform.parent.DetachChildren();
-				canControl = true;
-			}
+		if(gameObject.GetComponent<PlayerStats>().hasHost == true){
+
 		}
 		if(gameObject.GetComponent<PlayerStats>().hasHost == true){
 			//add host to list, follow host around
@@ -45,17 +44,44 @@ public class PlayerController : MonoBehaviour {
 
 	}
 	void OnTriggerStay2D(Collider2D other){
-		if(other.tag == "Host"){
-			canControl = false;
-			gameObject.GetComponent<PlayerStats>().hasHost = true;
-			//transform.position = other.transform.position;
-			//other.transform
-			gameObject.transform.SetParent(other.transform);
+		if(gameObject.GetComponent<PlayerStats>().hasHost == false){
+			if(other.tag == "Host"){
+				Hosted(other);
+			}
+		}
+		else if (gameObject.GetComponent<PlayerStats>().hasHost == true){
+			if(Input.GetKey(KeyCode.LeftControl)){
+				UnHosted(other);
+			}
 		}
 	}
 
-	void Hosted(){
+	void Hosted(Collider2D other){
+		canControl = false;
 
+		gameObject.GetComponent<PlayerStats>().hasHost = true;
+		host = other.gameObject;
+		//transform.position = other.transform.position;
+		//other.transform
+		gameObject.transform.SetParent(other.transform);
+		other.GetComponent<AIStates>().Invoke("Implanted", 0);
 		//transform.position = 
+	}
+
+	void UnHosted(Collider2D other){
+		StartCoroutine("DetachFromHost");
+		other.GetComponent<AIStates>().Invoke("UnImplanted", 0);
+		Debug.Log("unimplant");
+
+	}
+	IEnumerator DetachFromHost(){
+		gameObject.transform.parent.DetachChildren();
+		canControl = true;
+		yield return new WaitForSeconds(1.0f);
+		//host = null;
+		gameObject.GetComponent<PlayerStats>().hasHost = false;
+		if(host != null){
+			host = null;
+		}
 	}
 }

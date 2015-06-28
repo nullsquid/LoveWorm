@@ -25,6 +25,9 @@ public class AIStates : MonoBehaviour {
 		if(other.tag == "Host"){
 			Calling();
 		}
+		//else if (other.tag == "Player"){
+		//	Implanted();
+		//}
 	}
 
 	void Wandering(){
@@ -49,9 +52,17 @@ public class AIStates : MonoBehaviour {
 		Wandering();
 	}
 
-	void Implanted(){
+	public void Implanted(){
+		Debug.Log("implanted");
+		stats.isImplanted = true;
 
 	}
+
+	public void UnImplanted(){
+		stats.isImplanted = false;
+	}
+	
+
 	IEnumerator WaitToSpeak(){
 		agent.StopCoroutine("WaitAndMove");
 		yield return new WaitForSeconds(2f);

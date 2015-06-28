@@ -15,7 +15,7 @@ public class CharacterGenerator : MonoBehaviour {
 		Character newCharacter;
 		for(int i = 0; i <= numberOfCharacters; i++){
 			int newNameIndex;
-			bool named = false;
+			//bool named = false;
 			newCharacter = Instantiate(characterPrefab, transform.position, transform.rotation) as Character;
 			newCharacter.gender = database.allGenders[Random.Range(0, database.allGenders.Count)];
 			if(newCharacter.gender == "Male"){
