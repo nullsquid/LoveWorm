@@ -9,6 +9,8 @@ public class AIStates : MonoBehaviour {
 	public bool interacting = false;
 	public float stateDelay;
 	public Canvas talkBubble;
+	GameObject instance;
+	bool instanceCreated = false;
 
 	void Start(){
 		stats = GetComponent<Character>();
@@ -22,17 +24,24 @@ public class AIStates : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		GameObject instance;
+	
 		if(other.tag == "Host"){
 			if(stats.isImplanted != true){
 				Calling();
 			}
 			else if (stats.isImplanted == true){
+				//pause game. timescale = 0?
 				agent.wander = false;
 				other.GetComponent<PathAgent>().wander = false;
-				instance = Instantiate(GetComponent<CharacterTalking>().dialogueMachinePrefab, transform.position, transform.rotation) as GameObject;
-				instance.transform.position = Vector3.zero;
-				instance.transform.rotation = Quaternion.identity;
+				if(instanceCreated == false){
+					instance = Instantiate(GetComponent<CharacterTalking>().dialogueMachinePrefab, transform.position, transform.rotation) as GameObject;
+					instance.name = this.gameObject.name + " machine";
+					instance.transform.position = Vector3.zero;
+					instance.transform.rotation = Quaternion.identity;
+					Debug.Log(instance);
+					instanceCreated = true;
+				}
+				
 			}
 		}
 		//else if (other.tag == "Player"){
