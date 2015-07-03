@@ -90,7 +90,6 @@ Transform:
   m_RootOrder: 0
 --- !u!50 &5072896
 Rigidbody2D:
-  serializedVersion: 2
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -99,11 +98,11 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 0
+  m_FixedAngle: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!58 &5850816
 CircleCollider2D:
   m_ObjectHideFlags: 1
@@ -147,6 +146,8 @@ MonoBehaviour:
   isImplanted: 0
   gender: 
   characterName: 
+  spriteTop: {fileID: 0}
+  spriteSide: {fileID: 0}
   fatigue: 0
   arousal: 0
   safety: 0
@@ -229,6 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847398d37c26a704f80b8d5af5e098fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueMachinePrefab: {fileID: 199406, guid: c8318f166a8feac4ea75784e15ef9272,
+    type: 2}
 --- !u!114 &11467170
 MonoBehaviour:
   m_ObjectHideFlags: 1

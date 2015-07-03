@@ -13,12 +13,15 @@ public class Character : MonoBehaviour {
 	public string gender;
 	public string characterName;
 
+	public Sprite spriteTop;
+	public Sprite spriteSide;
 	//stats
 	public float fatigue;
 	public float arousal;
 	public float safety;
 	public float euphoria;
 
+	//public List<string> DialogueFlirty
 
 	//what they're attracted to
 	public List<string> likes = new List<string>();
