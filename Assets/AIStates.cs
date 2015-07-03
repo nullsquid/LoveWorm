@@ -9,8 +9,7 @@ public class AIStates : MonoBehaviour {
 	public bool interacting = false;
 	public float stateDelay;
 	public Canvas talkBubble;
-	GameObject instance;
-	bool instanceCreated = false;
+	//public bool instanceCreated = false;
 
 	void Start(){
 		stats = GetComponent<Character>();
@@ -31,15 +30,11 @@ public class AIStates : MonoBehaviour {
 			}
 			else if (stats.isImplanted == true){
 				//pause game. timescale = 0?
-				agent.wander = false;
-				other.GetComponent<PathAgent>().wander = false;
-				if(instanceCreated == false){
-					instance = Instantiate(GetComponent<CharacterTalking>().dialogueMachinePrefab, transform.position, transform.rotation) as GameObject;
-					instance.name = this.gameObject.name + " machine";
-					instance.transform.position = Vector3.zero;
-					instance.transform.rotation = Quaternion.identity;
-					Debug.Log(instance);
-					instanceCreated = true;
+				//agent.wander = false;
+				//other.GetComponent<PathAgent>().wander = false;
+				if(gameObject.GetComponent<CharacterTalking>().instanceCreated == false){
+
+					gameObject.GetComponent<CharacterTalking>().EnterConversationMode(other);
 				}
 				
 			}
@@ -86,6 +81,7 @@ public class AIStates : MonoBehaviour {
 		agent.StopCoroutine("WaitAndMove");
 		yield return new WaitForSeconds(2f);
 		talkBubble.enabled = true;
+		talkBubble.transform.rotation = Quaternion.identity;
 		StartCoroutine("NormalConversation");
 
 

@@ -275,7 +275,7 @@ GameObject:
   - 114: {fileID: 11460840}
   - 114: {fileID: 11498972}
   m_Layer: 0
-  m_Name: CharacterDialogueSlider
+  m_Name: CharacterDialogueMachine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -288,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 196184}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.100000001, y: 2.5, z: 0}
+  m_LocalPosition: {x: .00999999978, y: .850000024, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 450836}
@@ -300,7 +300,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 124018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.5, y: 0, z: 0}
+  m_LocalPosition: {x: -1.39999998, y: -.300000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 438616}
@@ -328,7 +328,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 162152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.30000019, y: 0, z: 0}
+  m_LocalPosition: {x: 1.42999995, y: -.300000012, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467650}
@@ -568,7 +568,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Do you like chinchillas?
 --- !u!114 &11450456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -580,7 +580,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -695,6 +695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activeChar: {fileID: 0}
   passiveChar: {fileID: 0}
+  currentText: 
 --- !u!212 &21226448
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -825,13 +826,13 @@ Canvas:
   serializedVersion: 2
   m_RenderMode: 1
   m_Camera: {fileID: 0}
-  m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PlaneDistance: 1
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
 --- !u!224 &22402766
 RectTransform:
   m_ObjectHideFlags: 1
@@ -847,9 +848,9 @@ RectTransform:
   - {fileID: 22417510}
   m_Father: {fileID: 22403336}
   m_RootOrder: 1
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: -210}
+  m_AnchorMin: {x: .5, y: 0}
+  m_AnchorMax: {x: .5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 40}
   m_SizeDelta: {x: 394.480011, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22403336
@@ -976,7 +977,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 535, y: 250}
+  m_SizeDelta: {x: 400, y: 250}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22444554
 RectTransform:
@@ -1044,7 +1045,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 245, y: 150}
   m_Pivot: {x: .5, y: .5}
 --- !u!224 &22485504
 RectTransform:
@@ -1060,9 +1061,9 @@ RectTransform:
   - {fileID: 22418196}
   m_Father: {fileID: 22403336}
   m_RootOrder: 2
-  m_AnchorMin: {x: .5, y: .5}
-  m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 0, y: 230}
+  m_AnchorMin: {x: .5, y: 1}
+  m_AnchorMax: {x: .5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -44.7999992}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000

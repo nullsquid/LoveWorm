@@ -5,13 +5,10 @@ public class CharacterDialogueTextController : MonoBehaviour {
 
 	public Character activeChar;
 	public Character passiveChar;
-	// Use this for initialization
-	void Start () {
+	public string currentText;
+	void Awake () {
 	
 	}
 	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+
 }
