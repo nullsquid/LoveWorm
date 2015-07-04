@@ -51,6 +51,7 @@ GameObject:
   - 58: {fileID: 5850816}
   - 114: {fileID: 11457260}
   - 114: {fileID: 11417966}
+  - 114: {fileID: 11473882}
   m_Layer: 0
   m_Name: TopChar
   m_TagString: Host
@@ -232,6 +233,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueMachinePrefab: {fileID: 199406, guid: c8318f166a8feac4ea75784e15ef9272,
     type: 2}
+  instanceCreated: 0
+  camera: {fileID: 0}
 --- !u!114 &11467170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,6 +263,17 @@ MonoBehaviour:
   m_Text: '...
 
 '
+--- !u!114 &11473882
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 186170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4183a57398be70442b15660da709d991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11492892
 MonoBehaviour:
   m_ObjectHideFlags: 1
