@@ -42,4 +42,5 @@ public class Character : MonoBehaviour {
 	//idle
 	//
 
+
 }

@@ -13,8 +13,8 @@ public class SliderController : MonoBehaviour {
 	
 	public bool isActive;
 	
-	public Character activeChar;
-	public Character passiveChar;
+	public GameObject activeChar;
+	public GameObject passiveChar;
 	
 
 
