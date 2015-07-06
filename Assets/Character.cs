@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class Character : MonoBehaviour {
+public abstract class Character : MonoBehaviour {
 
 	public bool hasTits;
 
@@ -21,6 +21,7 @@ public class Character : MonoBehaviour {
 	public float safety;
 	public float euphoria;
 
+	public CharacterDialogue dialogue;
 	//public List<string> DialogueFlirty
 
 	//what they're attracted to
@@ -41,6 +42,10 @@ public class Character : MonoBehaviour {
 	//===STATES===//
 	//idle
 	//
+
+	public virtual void Talk(string tone){
+		//base talk method
+	}
 
 
 }
