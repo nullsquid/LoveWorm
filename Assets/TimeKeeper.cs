@@ -5,13 +5,15 @@ public class TimeKeeper : MonoBehaviour {
 	
 	public float minute;
 	public float hour;
-	public float day;
+	public int day;
 	public string dayName;
 
 	public float totalDays;
 
 	void Start(){
 		//minute = 0;
+		//SetDay (day);
+		StartCoroutine("SetDay", day);
 	}
 	// Update is called once per frame
 	void Update () {
@@ -33,37 +35,46 @@ public class TimeKeeper : MonoBehaviour {
 
 	void IncrementDay(){
 		day += 1;
+		StartCoroutine("SetDay", day);
+		//Invoke("SetDay");
 		if(day>=6){
 			day = 0;
 		}
 		totalDays += 1;
 	}
 
-	/*void SetDay(float dayNumber){
+	IEnumerator SetDay(int dayNumber){
 		switch(dayNumber){
-		case 0f:
+		case 0:
 			dayName = "Sunday";
 			break;
-		case 1f:
+		case 1:
 			dayName = "Monday";
 			break;
-		case 2f:
+		case 2:
 			dayName = "Tuesday";
 			break;
-		case 3f:
+		case 3:
 			dayName = "Wednesday";
 			break;
-		case 4f:
+		case 4:
 			dayName = "Thursday";
 			break;
-		case 5f:
+		case 5:
 			dayName = "Friday";
 			break;
-		case 6f:
+		case 6:
 			dayName = "Saturday";
+			break;
+		//HACK
+		case 7:
+			dayName = "Sunday";
 			break;
 		default:
 			dayName = null;
+			break;
 		}
-	}*/
+		Debug.Log("Daynumber = " + dayNumber);
+			yield return null;
+	}
 }

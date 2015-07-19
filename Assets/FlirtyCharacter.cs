@@ -7,6 +7,7 @@ public class FlirtyCharacter : Character {
 	public override void Talk(string tone){
 		switch(tone){
 
+
 		}
 	}
 }
